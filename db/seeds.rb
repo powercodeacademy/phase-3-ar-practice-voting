@@ -6,7 +6,7 @@ Voter.destroy_all
 Candidate.destroy_all
 
 parties = ["Democrat", "Republican", "Independent"]
-offices = ["House of Representatives", "Senate", "Governor"]
+seats = ["House of Representatives", "Senate", "Governor"]
 
 puts "Creating voters..."
 20.times do
@@ -15,7 +15,7 @@ end
 
 puts "Creating candidates..."
 10.times do
-  Candidate.create(name: Faker::Name.name, party: parties[rand(0..2)], office: offices[rand(0..2)])
+  Candidate.create(name: Faker::Name.name, party: parties[rand(0..2)], seat: seats[rand(0..2)])
 end
 
 puts "Creating ballots..."
