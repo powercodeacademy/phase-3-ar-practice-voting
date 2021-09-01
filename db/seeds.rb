@@ -25,8 +25,9 @@ puts "Creating ballots..."
   # Get a candidate instance:
   candidate_id = Candidate.ids.sample
   # Get a random year between 2000 and 2020:
-  year = rand(2000..2020)
+  year = rand(2010..2020)
 
+  Ballot.create(voter_id: voter_id, candidate_id: candidate_id, year: year)
   # TODO: create ballots! Remember, a ballot belongs to a voter
   # and a ballot belongs to a candidate.
 end
